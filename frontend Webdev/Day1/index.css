@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#box{
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(rog.png);
+    background-size: 100% 100%;
+}
+
+#head{
+    color: rgb(221, 27, 27);
+    font-size: 50px;
+}
+
+#para{
+    color: white;
+    font-size: 30px;
+}

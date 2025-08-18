@@ -1,0 +1,46 @@
+div{
+    background-color: red;
+    height: 600px;
+}
+
+div:hover{
+ animation-name: kuchbhi;
+  animation-duration: 5s;
+  /* animation-delay: 2s; */
+  /* animation-iteration-count: 2; */
+  /* animation-direction: alternate; */
+}
+
+@keyframes kuchbhi{
+0%{
+    background-color: goldenrod;
+    width: 600px;
+    border-radius: 20%;
+}
+
+25%{
+    background-color: aqua;
+    /* width: 100vw; */
+    width: 800px;
+    border-radius: 30%;
+}
+
+50%{
+    background-color: brown;
+    /* height: 500px;
+   border-radius: 100%; */
+
+   width: 900px;
+    border-radius: 10%;
+}
+
+100%{
+    background-color: aquamarine;
+    /* height: 100px;
+    width: 100px; */
+
+    width: 600px;
+    border-radius: 100%;
+}
+
+}
