@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+
+
+/* #grid{
+        border: 2px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 200px 200px  ;
+        grid-template-rows: 200px 250px;
+        gap: 10px;
+    
+    } */
+
+    /* #grid div{
+        border: 2px,solid gray; 
+    } */
+
+#box{
+    height: 200px;
+    width: 200px;
+    /* background:linear-gradient(Red, Green,yellow); */
+    background:linear-gradient(to right ,Red, Green ,yellow );
+     /* background:linear-gradient(to right ,Red 20%, Green 40%,yellow 50%); */
+}
+
+
+#repeat{
+
+    height: 200px;
+    width: 200px;
+    background: repeating-linear-gradient(
+        45deg ,  
+        red, 
+        red 10px , 
+        yellow 10px, 
+        yellow 20px
+    );
+}
+
+#multple{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(
+    to right, red, blue, green , yellow, purple, brown , cyan 
+    );
+}
+
+#Radical  {
+ height: 200px;
+    width: 500px;
+    background: radial-gradient(blue,cyan , purple);
+
+}
+
+
+#Radical-elipse {
+ height: 200px;
+    width: 500px;
+    background: radial-gradient(ellipse at  center  ,blue, red,green )
+
+}
+
+#radial-pose{
+ height: 200px;
+    width: 500px;
+    background: radial-gradient(circle at  top left, blue ,  green  ,  yellow);
+}
+
+#conic-Repeat{
+     height: 200px;
+    width: 500px;
+    background: repeating-conic-gradient(
+        blue 0deg 20deg ,  
+        yellow 20deg 40deg  
+    );
+}
+
+
+#Spiaral { 
+    height: 300px;
+    width: 500px;
+    background: repeating-radial-gradient(
+        blue, 
+        blue 20px , 
+        yellow 20px ,
+        yellow 40px
+    );
+}
+
+
+#cone{
+    height: 200px;
+    width: 500px;
+    background: conic-gradient(
+        blue,  red ,  yellow , green  ,  purple, cyan
+    );
+}
+
+#radial-gradial{
+    height: 200px;
+    width:  500px;
+    background: radial-gradient(circle  at  top left , orange ,  cyan  , aqua, green  ,  lime );
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+    
+
+   
+
+   
+    <div id ="box">box</div>
+    <div id="repeat">repeat</div>
+    <div id =  "multple">multple</div>
+
+    <div id="Radical">Radical</div>
+    <div id="Radical-elipse">Radical-elipse</div>
+    <div  id ="Spiaral">Spiral</div>
+
+    <div id = "radial-pose">radial-pose </div>
+    <div id ="conic-Repeat"> Circel-repeat</div>
+    <div id ="cone">cone</div>
+
+
+    <div id ="radial-gradial">radial-gradial</div>
+
+
+
+   
+
+
+
+</body>
+</html>

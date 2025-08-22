@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: black;
     overflow: hidden;
   }
   #circle {

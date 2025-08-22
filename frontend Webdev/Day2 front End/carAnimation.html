@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+body{
+    background-color: aqua;
+    margin: 0;
+}
+
+
+#road{
+    height: 150px;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+   
+
+  
+}
+
+
+
+#line{
+    height: 30px;
+    width: 150px;
+    background-color: white;
+     animation-name: Roadrun;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+     animation-timing-function: linear;
+    animation-direction:normal;
+
+
+}
+
+
+@keyframes Roadrun {
+
+    
+   0% {  transform: translatex(90vw); }
+    100% {  transform:translatex(0); }    
+
+}
+
+
+
+
+#car{
+    height: 170px;
+    width: 300px;
+    background-color: red;
+    position: absolute;
+    margin: 10px;
+    border-radius: 10px;
+    bottom: 40px;
+     display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: r;
+}
+
+.wheelleft{
+
+    background-color: yellow;
+   border-radius: 50%;
+   margin: 10px;
+   margin-bottom: -30px;
+    height: 80px;
+    width: 80px;
+    border: 5px;
+     background: linear-gradient(aqua, blue, green);
+      animation-name: wheelAni;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction:normal;
+
+}
+
+.wheelright{
+
+    background-color: yellow;
+   border-radius: 50%;
+    height: 80px;
+    margin: 10px;
+    margin-bottom: -30px;
+    width: 80px;
+     background: linear-gradient(orange, blue, green);
+      animation-name: wheelAni; 
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction:normal;
+
+}
+
+
+  @keyframes wheelAni {
+    0%   { top: 0; transform: rotate(0deg); }
+    100% { top: 0; transform: rotate(360deg); } /* Ball touches ground */
+
+    
+  }
+
+
+
+
+
+   </style>
+</head>
+<body>
+
+    <div id ="road">
+        <div id ="line"> </div>
+          <div id ="line"> </div>
+            <div id ="line"> </div>
+              <div id ="line"> </div>
+                <div id ="line"> </div>
+       
+
+    </div>
+
+
+    <div id ="car">
+        <div class="wheelleft"></div>
+        <div class="wheelright"></div>
+    </div>
+
+
+    
+</body>
+</html>

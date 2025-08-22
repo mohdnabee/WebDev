@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #grid{
+        border: 2px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 200px 200px  ;
+        grid-template-rows: 200px 250px;
+        gap: 10px;
+    
+    }
+
+    #grid div{
+        border: 2px,solid gray; 
+    }
+
+
+    #one{
+        background-color: aqua;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+       
+    }
+
+
+    #two{
+         background-color: blue;
+        
+    }
+
+
+    #three{
+        background-color: red;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #four{
+        background-color: chartreuse;
+    }
+    
+</style>
+
+<body>
+    
+
+    <div id ="grid">
+        <div id="one">
+            <img src="kakasi.JPG" alt=""
+            >
+        </div>
+         <div id="two">2</div>
+          <div id="three">3</div>
+           <div id="four">4</div>
+            <div id="five">5</div>
+             <div id="six">6</div>
+              <!-- <div id="seven">7</div> -->
+             <!-- <div id="Eight">8</div>
+              <div id="Nine">9</div>
+             <div id="ten">10</div>
+              <div id="eleven">11</div>
+             <div id="twele">12</div> -->
+    </div>
+
+    
+</body>
+</html>
