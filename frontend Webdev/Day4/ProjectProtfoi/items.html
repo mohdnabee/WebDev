@@ -1,0 +1,209 @@
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spinning Logos Animation</title>
+  <style>
+    /* Reset & base styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      perspective: 1200px;
+    }
+
+    /* The main big white blob circle */
+    .main-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 320px;
+      height: 320px;
+      background:
+        radial-gradient(circle at center, #f9f9f9, #e6e6e6);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0 0 8px rgba(255 255 255 / 0.3));
+      z-index: 1;
+    }
+
+    /* Color behind circles: Blue and Yellow big circles partially visible */
+    .color-bg {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      z-index: 0;
+      filter: drop-shadow(0 0 6px rgba(0 0 0 / 0.3));
+    }
+
+    .blue-circle {
+      background: #1747b1;
+      top: 30%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 8px 15px rgba(23,71,177,0.7);
+    }
+    .yellow-circle {
+      background: #f3c032;
+      top: 70%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 8px 15px rgba(243,192,50,0.7);
+    }
+
+    /* Spinning wrapper */
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      transform-style: preserve-3d;
+      animation: spin 15s linear infinite;
+      transform-origin: center center;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    /* Each logo circle container */
+    .logo-circle {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow:
+        0 1px 4px rgba(0,0,0,0.12),
+        inset 0 0 8px #ededed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: default;
+      transition: box-shadow 0.3s ease;
+    }
+    .logo-circle:hover {
+      box-shadow:
+        0 0 12px 3px #4285f4,
+        inset 0 0 15px #e3f4ff;
+      z-index: 10;
+    }
+
+    /* Positions around the circle */
+    /* Top: Upwork */
+    .pos-top {
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    /* Right: Shopify */
+    .pos-right {
+      top: 50%;
+      left: 95%;
+      transform: translate(-100%, -50%);
+    }
+    /* Bottom: Facebook */
+    .pos-bottom {
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+    /* Left: Freelancer */
+    .pos-left {
+      top: 50%;
+      left: 5%;
+      transform: translate(0%, -50%);
+    }
+    /* Center: Amazon */
+    .pos-center {
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ccc;
+      box-shadow:
+        0 2px 10px rgba(0,0,0,0.15),
+        inset 0 0 15px #eee;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Logo images styling */
+    .logo-circle img {
+      max-width: 50%;
+      max-height: 50%;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+    
+  <div class="container" aria-label="Spinning logos animation">
+    <div class="color-bg blue-circle" aria-hidden="true"></div>
+    <div class="color-bg yellow-circle" aria-hidden="true"></div>
+
+    <div class="main-circle" aria-hidden="true"></div>
+
+    <div class="spinner" role="list" aria-live="polite" aria-atomic="true">
+      <div class="logo-circle pos-top" role="listitem" aria-label="Upwork logo">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8000ab80-094f-4ba6-a390-c1a7776133ae.png" 
+          alt="Upwork logo stylized green 'Up' letters on white circular background" 
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="logo-circle pos-right" role="listitem" aria-label="Shopify logo">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a03a1f85-40eb-4e60-a180-6e0275a15bfc.png" 
+          alt="Shopify logo green shopping bag icon on white circular background" 
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="logo-circle pos-bottom" role="listitem" aria-label="Facebook logo">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f898c29d-a46c-4111-b961-ddd3b07694a1.png" 
+          alt="Facebook logo blue letter F on white circular background" 
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="logo-circle pos-left" role="listitem" aria-label="Freelancer logo">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3d8c034e-58b9-4115-bda0-85570d48ea08.png" 
+          alt="Freelancer logo dark stylized letter F on white circular background" 
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="logo-circle pos-center" role="listitem" aria-label="Amazon logo">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d69d5631-ba80-43f3-b3a9-b4f0f5236db4.png" 
+          alt="Amazon logo black text with orange curved arrow below on white circular background" 
+          onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+```
