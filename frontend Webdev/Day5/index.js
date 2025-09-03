@@ -39,3 +39,36 @@ console.log(e)
 const f= 5 
 console.log(f)
 
+//  basic opertaor 
+// console.log(5==5) //  true
+// console.log(5!=5) // false
+console.log(5=='5') // true 
+console.log(5==='5') // fals
+
+//  undefined vs null
+
+// var  a =  null
+
+// let  aa=100
+// let  to=aa==100
+// console.log(aa)
+
+let  FirstName ="Mohd"
+let  lastName ="nabeel"
+console.log(FirstName , lastName)
+ console.log(`${FirstName} ${lastName}`)
+
+
+ let city = "Jabalpur"
+ let state=  "Madhya Pradesh"
+ let address = `${city} , ${state}`
+    console.log(address)
+
+
+    // if else
+    let age = 18
+    if(age>=18){
+        console.log("you can vote")
+    }else{
+        console.log("you can not vote")
+    }
