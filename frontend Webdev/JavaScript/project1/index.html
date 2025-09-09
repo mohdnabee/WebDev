@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" />
+
+<script>
+    // let a= ["img4.png","img3.png","img2.jpg","na1.jpg"]
+    let  a=["https://c4.wallpaperflare.com/wallpaper/974/565/254/windows-11-windows-10-minimalism-hd-wallpaper-preview.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg",
+"https://c4.wallpaperflare.com/wallpaper/764/505/66/baby-groot-4k-hd-superheroes-wallpaper-preview.jpg"]
+    let img1=document.querySelector("img")
+    let num=0
+        setInterval(()=>{
+            img1.setAttribute('src',a[num])
+            num=(num+1)%a.length;
+        },1500)
+</script>
+</body>
+</html>

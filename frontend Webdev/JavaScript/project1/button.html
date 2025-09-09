@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="fun1()">click</button>
+
+    <script>
+        // let a=document.querySelector("body")
+       
+        // function fun1(){
+        //     // console.log("hello");
+        //     a.style.backgroundColor="red"
+            
+        // }
+
+
+
+         let a=["red","green","cyan","yellow","blue","gray"]
+         
+           let img1=document.querySelector("body")
+    let num=0
+        setInterval(()=>{
+             a.style.backgroundColor=a[num]
+            num=(num+1)%a.length;
+        },1500)
+           
+    </script>
+
+
+</body>
+</html>
