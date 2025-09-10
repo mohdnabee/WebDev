@@ -9,7 +9,7 @@
 
 
     <button onclick="fun1()">Click</button>
-    <!-- <h2>click the button</h2> -->
+    <h2>click the button</h2>
 
     <input>
 
@@ -23,7 +23,7 @@
 
         btn.addEventListener("click",()=>{
             body.style.backgroundColor="red"
-            // h2.innerText("Wellcome")
+            h2.innerText= "Hello"
         })
 
 
@@ -39,7 +39,7 @@ let inp  =  document.querySelector("input")
 let  h3 = document.querySelector("h3")
 
 inp.addEventListener("input", (e)=>{
-    console.log(e.target.value);
+    // console.log(e.target.value);
     h3.innerText = e.target.value;
     
 })
