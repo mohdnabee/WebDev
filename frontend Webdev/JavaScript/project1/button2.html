@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Color Toggle</title>
+  <style>
+    #myBtn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+      color: rgb(3, 0, 0);
+    }
+  </style>
+</head>
+<body>
+  <button id="myBtn">Click Me</button>
+
+  <script>
+    let colors = ["red", "blue", "green", "purple"]; // array of colors
+    let index = 0; // start from first color
+
+    const btn = document.querySelector("body");
+
+    btn.addEventListener("click", () => {
+      btn.style.backgroundColor = colors[index]; // apply color
+      index = (index + 1) % colors.length; // move to next (loop back when end)
+    });
+  </script>
+</body>
+</html>
