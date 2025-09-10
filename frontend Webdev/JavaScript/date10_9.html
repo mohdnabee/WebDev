@@ -9,15 +9,21 @@
 
 
     <button onclick="fun1()">Click</button>
+    <!-- <h2>click the button</h2> -->
 
+    <input>
+
+    <h3> enter The values </h3>
 
     <script>
 
         let  btn =  document.querySelector("button")
         let body=  document.querySelector("body")
+        let h2=  document.querySelector("h2")
 
         btn.addEventListener("click",()=>{
             body.style.backgroundColor="red"
+            // h2.innerText("Wellcome")
         })
 
 
@@ -28,6 +34,15 @@
 // }
 
 
+
+let inp  =  document.querySelector("input")
+let  h3 = document.querySelector("h3")
+
+inp.addEventListener("input", (e)=>{
+    console.log(e.target.value);
+    h3.innerText = e.target.value;
+    
+})
 
     </script>
     
